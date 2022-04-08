@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Antennas" id="Antennas">
+	<SimpleField name="Points" type="string"></SimpleField>
+	<SimpleField name="lat.1" type="float"></SimpleField>
+	<SimpleField name="lng.1" type="float"></SimpleField>
+</Schema>
+<Folder><name>Antennas</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antennas">
+		<SimpleData name="Points">FO5</SimpleData>
+		<SimpleData name="lat.1">45.467837</SimpleData>
+		<SimpleData name="lng.1">-84.303325</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.303325,45.467837</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antennas">
+		<SimpleData name="Points">Section 7</SimpleData>
+		<SimpleData name="lat.1">45.416355</SimpleData>
+		<SimpleData name="lng.1">-84.335987</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.335987,45.416355</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antennas">
+		<SimpleData name="Points">Section 1</SimpleData>
+		<SimpleData name="lat.1">45.406574</SimpleData>
+		<SimpleData name="lng.1">-84.332772</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.332772,45.406574</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antennas">
+		<SimpleData name="Points">Kliber Dam</SimpleData>
+		<SimpleData name="lat.1">45.395531</SimpleData>
+		<SimpleData name="lng.1">-84.336082</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.336082,45.395531</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
