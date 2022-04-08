@@ -5,6 +5,8 @@
 rm(list=ls());  options(show.error.locations = TRUE);
 source(file="scripts/spatial-header.R"); 
 
+#test edit
+
 #### Application
 #    1) Make these changes to plot2:
 #    - position the compass on the right side and centered vertically
