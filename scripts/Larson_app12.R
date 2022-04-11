@@ -1,11 +1,9 @@
 #Author: Doug Larson
 #Date: 4/7/2022
-#Title: App 11
+#Title: App 12
 
 rm(list=ls());  options(show.error.locations = TRUE);
 source(file="scripts/spatial-header.R"); 
-
-#test edit
 
 #### Application
 #    1) Make these changes to plot2:
@@ -141,6 +139,10 @@ plot_LakeMI2 = ggplot() +
   theme_void() +   
   theme(panel.background=element_rect(color = "black", fill="transparent", 
                                       size=3));
+
+ggsave(filename="images/LakeMI2.jpg", plot=plot_LakeMI2, device=jpeg);
+LakeMI2_JPG = readJPEG("images/LakeMI2.jpg");
+
 plot(plot_LakeMI2);
 
 # 3) Create a rasterGrob of your own image
@@ -203,4 +205,36 @@ plot(multi2);
 # Application 3:
 # Recreate the two multipanelings from previous lesson using annotation_raster
 
+LakeMI_PNG = readPNG("images/LakeMI.png")
+
+newPlot = plotInfo +
+  annotation_raster(imgJPG,     
+                    xmin=2100000, xmax=3100000, 
+                    ymin=4200000, ymax=5000000) +
+  annotation_raster(LakeMI_PNG, 
+                    xmin=2100000, xmax=3100000, 
+                    ymin=6000000, ymax=7000000) +
+  coord_sf(crs = 26917,  
+           xlim = c(-3000000, 3500000),  
+           ylim = c(3000000, 7000000),
+           expand = TRUE);
+plot(newPlot);
+
+newPlot2 = plotInfo +
+  annotation_raster(imgRFID,     # does not matter JPG vs PNG
+                    xmin=-2400000, xmax=-0500000, 
+                    ymin=4000000, ymax=5400000) +
+  annotation_raster(LakeMI2_JPG, # does matter -- image has transparency
+                    xmin=1000000, xmax=2000000, 
+                    ymin=3000000, ymax=4000000) +
+  coord_sf(crs = 26917,  
+           xlim = c(-3000000, 2000000),  
+           ylim = c(3000000, 7000000),
+           expand = TRUE);
+plot(newPlot2);
+
+
+
+
+    
 
