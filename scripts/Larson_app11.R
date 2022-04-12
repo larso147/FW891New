@@ -1,3 +1,9 @@
+#Author: Doug Larson
+#Date: 4/6/2022
+#Title: Lesson 11
+
+#Note - Edited on 4/11/2022 for corrections to application 3
+
 rm(list=ls());  options(show.error.locations = TRUE);
 
 library(package = "sp");       #old Simple Features (but still needed)
@@ -126,12 +132,13 @@ lakes_SF = st_as_sf(lakes);
 states = ne_states(country = "United States of America");
 states_SF = st_as_sf(states);
 
+states_SF$adm0_sr
+
 plotApp3 = ggplot() +
   geom_sf(data = states_SF,
-          mapping = aes(geometry = geometry, linetype = region), 
-          fill = "grey") +
+          mapping = aes(geometry = geometry, size=as.factor(adm0_sr))) +
   geom_sf(data = lakes_SF,
-          mapping = aes(geometry = geometry, color = scalerank),
+          mapping = aes(geometry = geometry, color = min_zoom),
           fill = "lightblue") +
   scale_color_gradient(low = "purple", high = "green")+
   geom_sf(data = lakeMI_SF,
@@ -142,9 +149,9 @@ plotApp3 = ggplot() +
           mapping = aes(geometry=geometry, label=substr(museum,
                                                         start=1,
                                                         stop=3), fill = Presidential.Library))+
-  labs(color = "Scale Rank",
+  labs(color = "Minimum Zoom",
        fill = "Presidental Library",
-       linetype = "Region");
+       size = "State Size");
 plotApp3_2 = plotApp3 +
   coord_sf(crs = 4326,    
            xlim = c(-120, -70), 
