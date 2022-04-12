@@ -132,7 +132,6 @@ lakes_SF = st_as_sf(lakes);
 states = ne_states(country = "United States of America");
 states_SF = st_as_sf(states);
 
-states_SF$adm0_sr
 
 plotApp3 = ggplot() +
   geom_sf(data = states_SF,
