@@ -84,7 +84,7 @@ ApplicationPlot = BRZoomedOut +
                        text_col = 'black',
                        line_col = 'black',
                        fill = c("black", "white")))+
-  annotation_spatial_hline(intercept = c(45.40, 45.45), color = "green");
+  annotation_spatial_vline(intercept = c(-84.30, -84.25), color = "green");
 plot(ApplicationPlot)
   
 
