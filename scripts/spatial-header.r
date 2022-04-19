@@ -13,4 +13,9 @@
   library(package = "jpeg");
   library(package = "grid");
   library(package = "ggspatial");
+  library(package = "gganimate");
+  library(package = "gifski");
+  library(package = "av");
+  library(package = "transformr");
+  
   
