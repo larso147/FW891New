@@ -5,11 +5,6 @@
 rm(list=ls());  options(show.error.locations = TRUE);
 source(file="scripts/spatial-header.R"); # moved all package info to header.r
 
-library(package = "gganimate");
-library(package = "gifski");
-library(package = "av");
-library(package = "transformr");
-
 pseudoData = read.csv("data/pseudoData.csv");
 
 ### Application 1 (13b):
