@@ -19,6 +19,7 @@
                       start = numChars-5,  # 6th to last character
                       stop = numChars-4);  # 5th to last character
   
+  
   #### The data is not formatted the way we want
   #### What we want (need to "reshape" the data frame):
   #         AWND  PRCP  SNOW  TAVG  TMAX  TMIN  WDF2 ...
